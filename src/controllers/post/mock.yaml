@@ -1,0 +1,9 @@
+key: abc123
+content: |+
+  ---
+  subtitle: Subtitle goes here
+  ---
+  
+  # Working Title
+  
+  An elegant blog post goes here.

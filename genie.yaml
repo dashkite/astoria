@@ -1,0 +1,8 @@
+coffee:
+  targets:
+    - browser
+    - node
+yaml:
+  targets:
+    - browser
+    - node
