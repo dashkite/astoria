@@ -2,7 +2,6 @@ import YAML from "js-yaml"
 import * as Fn from "@dashkite/joy/function"
 import * as Obj from "@dashkite/joy/object"
 import * as Text from "@dashkite/joy/text"
-import HTML from "@dashkite/domo"
 import { marked } from "marked"
 
 frontMatter = ({ markdown, context... }) ->
@@ -18,40 +17,21 @@ frontMatter = ({ markdown, context... }) ->
     markdown = yaml
   { metadata, markdown }
 
-parseMarkdown = ({ markdown, context... }) ->
+parseMarkdown = ({ markdown, metadata, context... }) ->
     html = marked.parse markdown
-    { context..., html }
+    { context..., markdown, metadata, html }
 
-parseHTML = ({ html, context... }) ->
-  elements = HTML.parse html
-  root = document.createDocumentFragment()
-  root.append elements...
-  { root, context... }
-
-augmentMetadata = ({ root, metadata, context... }) ->
-  elements =
-    title: root.querySelector "h1:first-child"
-  metadata.title = elements.title?.textContent
-  { root, elements, metadata, context... }
-  
-insertHeader = ({ root, metadata, elements, context... }) ->
-  { subtitle } = metadata
-  { title } = elements
-  if title?
-    header = document.createElement "header"
-    header.append title
-    if subtitle?
-      elements.subtitle = HTML.div HTML.parse marked.parse subtitle
-      header.append elements.subtitle
-    root.prepend header
-  { root, metadata, elements, context... }
+augmentMetadata = ({ markdown, metadata, context... }) ->
+  # If title isn't in frontmatter, try to extract it from the first H1 in markdown
+  unless metadata.title?
+    match = markdown.match /^#\s+(.+)$/m
+    metadata.title = match[1] if match
+  { markdown, metadata, context... }
 
 parse = Fn.pipe [
   frontMatter
-  parseMarkdown
-  parseHTML
   augmentMetadata
-  insertHeader
+  parseMarkdown
 ]
 
 export default parse

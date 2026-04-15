@@ -1,8 +1,7 @@
+presets:
+  - "@dashkite/genie-module"
+
 coffee:
-  targets:
-    - browser
-    - node
-yaml:
   targets:
     - browser
     - node

@@ -16,7 +16,7 @@ class Post extends metaclass()
     tags: -> @_.tags
     markdown: -> @content
     parsed: -> @_parsed ?= parse { @markdown }
-    dom: -> [ @parsed.root.children... ]
+    html: -> @parsed.html
     metadata: -> @parsed.metadata
     title: -> @metadata.title
     subtitle: -> @metadata.subtitle
@@ -29,4 +29,3 @@ class Post extends metaclass()
         @_.content = value
 
 export default Post
-  
