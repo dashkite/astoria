@@ -4,7 +4,7 @@ import { parse } from "./helpers"
 class Post extends metaclass()
 
   @from: ( data ) ->
-    Object.assign ( new @ ), _: data
+    Object.assign ( new @ ), _: data ? {}
 
   toJSON: -> @data
 
@@ -20,6 +20,9 @@ class Post extends metaclass()
     metadata: -> @parsed.metadata
     title: -> @metadata.title
     subtitle: -> @metadata.subtitle
+    author: -> @metadata.author ? @_.author
+    date: -> @metadata.date ? @_.date
+    status: -> if @published then "published" else "draft"
 
   @properties
     content: 
@@ -27,5 +30,8 @@ class Post extends metaclass()
       set: ( value ) ->
         @_parsed = undefined
         @_.content = value
+    published:
+      get: -> @_.published ? false
+      set: ( value ) -> @_.published = value
 
 export default Post

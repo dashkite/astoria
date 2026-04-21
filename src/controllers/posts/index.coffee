@@ -6,19 +6,22 @@ import mock from "./mock"
 import defaultPost from "../post/mock"
 # import Posts from "#models/posts"
 
-Key =
+Address =
   generate: ->
     crypto.randomUUID().split("-")[0]
 
-Lakeshore.register "mock:/posts/{key}", {
+Lakeshore.register "mock:/posts/{address}", {
   Lakeshore.defaults...
+  get: ({ url }) ->
+    # Initialize with empty list if not found
+    Storage.get(url) ? content: []
   post: ({ url }, value = {}) ->
     if ( values = Storage.get url )?
-      value.key ?= Key.generate()
+      value.address ?= Address.generate()
       # fill in defaults
       value = { defaultPost..., value... }
       values.content.push value
-      Storage.set "mock:/post/#{ value.key }", value
+      Storage.set "mock:/post/#{ value.address }", value
       Storage.set url, values
       description: "created", content: value
     else
@@ -27,11 +30,17 @@ Lakeshore.register "mock:/posts/{key}", {
 
 class Controller extends do ( resources 
     posts:
-      template: "mock:/posts/{key}"
+      template: "mock:/posts/{address}"
   )
 
   @fallbacks
     posts: mock
+
+  resolve: ( specifier ) ->
+    await @model.resolve 
+      posts: bindings: address: specifier.posts.bindings.address
+    await @start?()
+    @
 
   "add empty post": ->
     @resources.posts.post()
@@ -39,14 +48,15 @@ class Controller extends do ( resources
   put: ( mutator ) ->
     @model.put ( context ) ->
       context = mutator context
-      # extract serializable post
+      # extract serializable posts
       context.posts = context.posts
       context
 
   listen: ->
-    await yield from EventReactor
+    yield from EventReactor
       .make @model.listen()
       .bind @
       .forward "*"
+    await return
 
 export default Controller
