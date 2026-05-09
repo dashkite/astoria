@@ -44,16 +44,16 @@ class Controller extends do ( resources
     yield from EventReactor
       .make @model.listen()
       .bind @
-      .forward "*"
-      .when "value", ( event ) ->
+      .forward "!model.value, !model.created"
+      .when "model.value", ( event ) ->
         yield {
           event...
           value: 
             profile: Profile.from event.value.profile
         }
         await return
-      .when "created", ( event ) ->
-        if event.scope == "profile"
+      .when "model.created", ( event ) ->
+        if event.source == "profile"
           profile = event.value
           address = Address.generate()
           profile.blog = { address }

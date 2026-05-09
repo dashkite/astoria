@@ -14,7 +14,7 @@ Lakeshore.register "mock:/posts/{address}", {
   Lakeshore.defaults...
   get: ({ url }) ->
     # Initialize with empty list if not found
-    Storage.get(url) ? content: []
+    description: "ok", content: (( Storage.get url ) ? [])
   post: ({ url }, value = {}) ->
     if ( values = Storage.get url )?
       value.address ?= Address.generate()
@@ -56,7 +56,7 @@ class Controller extends do ( resources
     yield from EventReactor
       .make @model.listen()
       .bind @
-      .forward "*"
+      .forward "!model.value"
     await return
 
 export default Controller

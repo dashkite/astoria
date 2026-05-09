@@ -9,7 +9,7 @@ Lakeshore.register "mock:/blog/{address}", {
   Lakeshore.defaults...
   get: ({ url }) ->
     # Initialize with default data if not found
-    Storage.get(url) ? mock
+    description: "ok", content: Storage.get(url) ? mock
   put: ({ url }, value = {}) ->
     if ( current = Storage.get(url) ? mock )?
       value = { current..., value... }
@@ -43,8 +43,8 @@ class Controller extends do ( resources
     yield from EventReactor
       .make @model.listen()
       .bind @
-      .forward "*"
-      .when "value", ( event ) ->
+      .forward "!model.value"
+      .when "model.value", ( event ) ->
         yield {
           event...
           value:

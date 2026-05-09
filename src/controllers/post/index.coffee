@@ -47,8 +47,8 @@ class Controller extends do ( resources
     yield from EventReactor
       .make @model.listen()
       .bind @
-      .forward "*"
-      .when "value", ( event ) ->
+      .forward "!model.value"
+      .when "model.value", ( event ) ->
         yield {
           event...
           value: 
