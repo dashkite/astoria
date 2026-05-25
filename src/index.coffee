@@ -1,4 +1,4 @@
 import * as Controllers from "./controllers"
-import * as Models from "./models"
+import * as Values from "./values"
 
-export { Controllers, Models }
+export { Controllers, Values }

@@ -9,7 +9,13 @@ class Profile extends metaclass()
 
   @getters
     data: -> @_
-    email: -> @_.email
-    blog: -> @_.blog ? {}
+    displayName: -> @name
+    address: -> @_.address
+    blog: -> @_.blog?.address
+
+  @properties
+    name:
+      get: -> @_.name
+      set: ( value ) -> @_.name = value
 
 export default Profile

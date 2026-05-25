@@ -22,10 +22,11 @@ parseMarkdown = ({ markdown, metadata, context... }) ->
     { context..., markdown, metadata, html }
 
 augmentMetadata = ({ markdown, metadata, context... }) ->
-  # If title isn't in frontmatter, try to extract it from the first H1 in markdown
+  # If title isn't in frontmatter, try to extract it from
+  # the first H1 in markdown
   unless metadata.title?
     match = markdown.match /^#\s+(.+)$/m
-    metadata.title = match[1] if match
+    ( metadata.title = match[1]) if match?
   { markdown, metadata, context... }
 
 parse = Fn.pipe [

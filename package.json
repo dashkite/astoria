@@ -1,6 +1,6 @@
 {
   "name": "@dashkite/astoria",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Models and controllers for Central Park",
   "keywords": [],
   "homepage": "https://github.com/dashkite/astoria#readme",
@@ -22,13 +22,25 @@
       "browser": "./build/browser/src/index.js",
       "node": "./build/node/src/index.js"
     },
+    "./controllers": {
+      "browser": "./build/browser/src/controllers/index.js",
+      "node": "./build/node/src/controllers/index.js"
+    },
     "./controllers/*": {
       "browser": "./build/browser/src/controllers/*/index.js",
       "node": "./build/node/src/controllers/*/index.js"
     },
-    "./models/*": {
-      "browser": "./build/browser/src/models/*/index.js",
-      "node": "./build/node/src/models/*/index.js"
+    "./mocks/*": {
+      "browser": "./build/browser/src/mocks/*/index.js",
+      "node": "./build/node/src/mocks/*/index.js"
+    },
+    "./values": {
+      "browser": "./build/browser/src/values/index.js",
+      "node": "./build/node/src/values/index.js"
+    },
+    "./values/*": {
+      "browser": "./build/browser/src/values/*/index.js",
+      "node": "./build/node/src/values/*/index.js"
     }
   },
   "imports": {
@@ -36,9 +48,17 @@
       "browser": "./build/browser/src/controllers/*/index.js",
       "node": "./build/node/src/controllers/*/index.js"
     },
-    "#models/*": {
-      "browser": "./build/browser/src/models/*/index.js",
-      "node": "./build/node/src/models/*/index.js"
+    "#fallbacks/*": {
+      "browser": "./build/browser/src/controllers/*/fallback.js",
+      "node": "./build/node/src/controllers/*/fallback.js"
+    },
+    "#mocks/*": {
+      "browser": "./build/browser/src/mocks/*/index.js",
+      "node": "./build/node/src/mocks/*/index.js"
+    },
+    "#values/*": {
+      "browser": "./build/browser/src/values/*/index.js",
+      "node": "./build/node/src/values/*/index.js"
     }
   },
   "main": "build/node/src/index.js",
@@ -51,9 +71,9 @@
     "build": "genie build"
   },
   "devDependencies": {
-    "@dashkite/amen": "^0.9.14",
+    "@dashkite/amen": "link:../amen",
     "@dashkite/amen-console": "^0.4.0",
-    "@dashkite/assert": "^0.1.4",
+    "@dashkite/assert": "^0.3.0",
     "@dashkite/genie": "^0.20.14",
     "@dashkite/genie-clean": "^0.9.0",
     "@dashkite/genie-coffee": "^0.9.0",
@@ -61,7 +81,8 @@
     "@dashkite/genie-release": "^0.5.0",
     "@dashkite/genie-sky": "^0.6.26",
     "@dashkite/genie-watch": "^0.5.0",
-    "@dashkite/genie-yaml": "^0.11.13"
+    "@dashkite/genie-yaml": "^0.11.13",
+    "@dashkite/halstead": "link:../halstead"
   },
   "dependencies": {
     "@dashkite/addison": "link:../addison",
@@ -69,7 +90,8 @@
     "@dashkite/domo": "link:../domo",
     "@dashkite/joy": "^0.12.25",
     "@dashkite/lakeshore": "link:../lakeshore",
-    "@dashkite/reactive": "^0.4.0",
+    "@dashkite/reactive": "link:../reactive",
+    "@dashkite/river": "link:../river",
     "@dashkite/storage": "^0.9.11",
     "js-yaml": "^4.1.1",
     "marked": "^17.0.6"

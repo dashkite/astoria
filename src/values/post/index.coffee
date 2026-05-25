@@ -10,10 +10,6 @@ class Post extends metaclass()
 
   @getters
     data: -> @_
-    key: -> @_.key
-    description: -> @_.description
-    image: -> @_.image
-    tags: -> @_.tags
     markdown: -> @content
     parsed: -> @_parsed ?= parse { @markdown }
     html: -> @parsed.html
@@ -25,6 +21,18 @@ class Post extends metaclass()
     status: -> if @published then "published" else "draft"
 
   @properties
+    key:
+      get: -> @_.key
+      set: ( value ) -> @_.key = value
+    description:
+      get: -> @_.description
+      set: ( value ) -> @_.description = value
+    image:
+      get: -> @_.image
+      set: ( value ) -> @_.image = value
+    tags:
+      get: -> @_.tags
+      set: ( value ) -> @_.tags = value
     content: 
       get: -> @_.content
       set: ( value ) ->

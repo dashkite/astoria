@@ -1,56 +1,22 @@
-import Lakeshore from "@dashkite/lakeshore"
-import Storage from "@dashkite/storage"
-import EventReactor from "@dashkite/reactive/event-reactor"
-import resources from "@dashkite/addison/mixins/resources"
-import mock from "./mock"
-import Blog from "#models/blog"
+import { tee } from "@dashkite/joy/function"
+import Atomic from "@dashkite/addison/atomic"
+import Value from "#values/blog"
+import Controller from "#controllers/base"
+import fallback from "#fallbacks/blog"
+import "#mocks/blog"
 
-Lakeshore.register "mock:/blog/{address}", {
-  Lakeshore.defaults...
-  get: ({ url }) ->
-    # Initialize with default data if not found
-    description: "ok", content: Storage.get(url) ? mock
-  put: ({ url }, value = {}) ->
-    if ( current = Storage.get(url) ? mock )?
-      value = { current..., value... }
-      Storage.set url, value
-      description: "updated", content: value
-    else
-      description: "not found"
-}
+class Blog extends Controller
 
-class Controller extends do ( resources
-    blog:
-      template: "mock:/blog/{address}"
-  )
+  @make: ->
+    Object.assign ( new @ ),
+      model: Atomic.make
+        template: "mock:/blog/{address}"
+        type: Value
+        fallback: fallback
 
-  @fallbacks
-    blog: mock
+  update: ( data ) ->
+    @execute ->
+      @model.put tee ( blog ) ->
+        Object.assign blog, data
 
-  resolve: ( specifier ) ->
-    await @model.resolve 
-      blog: bindings: address: specifier.blog.bindings.address
-    await @start?()
-    @
-
-  put: ( mutator ) ->
-    @model.put ( context ) ->
-      context = mutator context
-      context.blog = context.blog.data
-      context
-
-  listen: ->
-    yield from EventReactor
-      .make @model.listen()
-      .bind @
-      .forward "!model.value"
-      .when "model.value", ( event ) ->
-        yield {
-          event...
-          value:
-            blog: Blog.from event.value.blog
-        }
-        await return
-    await return
-
-export default Controller
+export default Blog
