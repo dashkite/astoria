@@ -68,32 +68,33 @@
   ],
   "scripts": {
     "test": "genie test",
-    "build": "genie build"
+    "build": "genie build",
+    "release": "genie release"
   },
   "devDependencies": {
     "@dashkite/amen": "link:../amen",
-    "@dashkite/amen-console": "^0.4.0",
-    "@dashkite/assert": "^0.3.0",
-    "@dashkite/genie": "^0.20.14",
-    "@dashkite/genie-clean": "^0.9.0",
-    "@dashkite/genie-coffee": "^0.9.0",
+    "@dashkite/amen-console": "0.4.0",
+    "@dashkite/assert": "0.3.0",
+    "@dashkite/belmont": "link:../belmont",
+    "@dashkite/genie": "0.20.14",
+    "@dashkite/genie-clean": "0.9.0",
+    "@dashkite/genie-coffee": "0.9.0",
     "@dashkite/genie-module": "link:../genie-module",
-    "@dashkite/genie-release": "^0.5.0",
-    "@dashkite/genie-sky": "^0.6.26",
-    "@dashkite/genie-watch": "^0.5.0",
-    "@dashkite/genie-yaml": "^0.11.13",
+    "@dashkite/genie-release": "0.5.0",
+    "@dashkite/genie-sky": "0.6.26",
+    "@dashkite/genie-watch": "0.5.0",
+    "@dashkite/genie-yaml": "0.11.13",
     "@dashkite/halstead": "link:../halstead"
   },
   "dependencies": {
     "@dashkite/addison": "link:../addison",
-    "@dashkite/belmont": "link:../belmont",
     "@dashkite/domo": "link:../domo",
-    "@dashkite/joy": "^0.12.25",
+    "@dashkite/joy": "0.12.25",
     "@dashkite/lakeshore": "link:../lakeshore",
     "@dashkite/reactive": "link:../reactive",
     "@dashkite/river": "link:../river",
-    "@dashkite/storage": "^0.9.11",
-    "js-yaml": "^4.1.1",
-    "marked": "^17.0.6"
+    "@dashkite/storage": "0.9.11",
+    "js-yaml": "4.1.1",
+    "marked": "17.0.6"
   }
 }
