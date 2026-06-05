@@ -7,16 +7,14 @@ import Lakeshore from "@dashkite/lakeshore"
 Providers.add "mock", Lakeshore
 
 tests = ( name ) ->
-
   ( await import( "./groups/#{ name }" )).default()
 
 do ->
 
   print await test "Astoria", [
-    await tests "post"
-    await tests "posts"
-    await tests "blog"
-    await tests "profile"
+    await tests "value"
+    await tests "mock"
+    await tests "controller"
   ]
 
   process.exit if success then 0 else 1

@@ -8,9 +8,9 @@ import "#mocks/post"
 class Post extends Controller
 
   @make: ->
-    Object.assign ( new @ ),
+    super
       model: Atomic.make
-        template: "mock:/post/{address}"
+        template: "mock://post/{address}"
         type: Value
         fallback: fallback
 
@@ -19,7 +19,7 @@ class Post extends Controller
       @model.put tee ( post ) ->
         Object.assign post, data
 
-  delete: ->
+  remove: ->
     @execute -> @model.delete()
 
 export default Post

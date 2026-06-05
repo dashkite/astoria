@@ -11,9 +11,6 @@ importers:
       '@dashkite/addison':
         specifier: link:../addison
         version: link:../addison
-      '@dashkite/belmont':
-        specifier: link:../belmont
-        version: link:../belmont
       '@dashkite/domo':
         specifier: link:../domo
         version: link:../domo
@@ -48,6 +45,9 @@ importers:
       '@dashkite/assert':
         specifier: ^0.3.0
         version: 0.3.0
+      '@dashkite/belmont':
+        specifier: link:../belmont
+        version: link:../belmont
       '@dashkite/genie':
         specifier: ^0.20.14
         version: 0.20.14

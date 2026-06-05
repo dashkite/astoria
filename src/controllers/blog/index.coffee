@@ -8,9 +8,9 @@ import "#mocks/blog"
 class Blog extends Controller
 
   @make: ->
-    Object.assign ( new @ ),
+    super
       model: Atomic.make
-        template: "mock:/blog/{address}"
+        template: "mock://blog/{address}"
         type: Value
         fallback: fallback
 

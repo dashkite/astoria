@@ -6,11 +6,15 @@ import "#mocks/profile"
 
 class Profile extends Controller
 
+  @connect: ( specifier ) ->
+    @resolve specifier
+
   @make: ->
-    Object.assign ( new @ ),
+    super
       model: Atomic.make
-        template: "mock:/profiles/{email}"
+        template: "mock://profiles/{email}"
         type: Value
+        fallback: {}
 
   update: ( data ) ->
     @execute ->

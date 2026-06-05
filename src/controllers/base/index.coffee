@@ -6,14 +6,16 @@ import iterable from "@dashkite/addison/mixins/iterable"
 
 class Controller extends do pipe [ metaclass, iterable ]
 
+  @make: ( properties ) ->
+    instance = Object.assign ( new @ ),
+      internal: Channel.make()
+      outgoing: Channel.make()
+      properties
+    instance.outgoing.source instance._logic()
+    instance
+
   @resolve: ( specifier ) ->
     ( @make() ).resolve specifier
-
-  constructor: ->
-    super()
-    @internal = Channel.make()
-    @outgoing = Channel.make()
-    @outgoing.source @_logic()
 
   @getters
     value: -> @model.value

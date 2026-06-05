@@ -7,16 +7,19 @@ import "#mocks/posts"
 class Posts extends Controller
 
   @make: ->
-    Object.assign ( new @ ),
+    super
       model: Atomic.make
-        template: "mock:/posts/{address}"
+        template: "mock://posts/{address}"
         type: Value
         fallback: fallback
 
-  add: ( data = {} ) ->
+  add: ( data = {}) ->
     @execute ->
-      @model.post ( posts ) ->
-        posts.data.push data
+      await @model.post ( posts ) ->
+        posts.items.push data
         posts
+      @model.get()
+
+  "add empty post": -> @add()
 
 export default Posts
