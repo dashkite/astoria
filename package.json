@@ -88,7 +88,7 @@
   },
   "dependencies": {
     "@dashkite/addison": "link:../addison",
-    "@dashkite/domo": "link:../domo",
+    "@dashkite/domo": "^0.2.35",
     "@dashkite/joy": "0.12.40",
     "@dashkite/lakeshore": "link:../lakeshore",
     "@dashkite/reactive": "link:../reactive",
