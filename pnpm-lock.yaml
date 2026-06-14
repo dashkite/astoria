@@ -46,8 +46,8 @@ importers:
         specifier: 0.3.0
         version: 0.3.0
       '@dashkite/belmont':
-        specifier: ^0.3.30
-        version: 0.3.30
+        specifier: ^0.3.31
+        version: 0.3.31
       '@dashkite/genie':
         specifier: 0.20.14
         version: 0.20.14
@@ -1087,8 +1087,8 @@ packages:
   '@dashkite/base64@1.0.1':
     resolution: {integrity: sha512-7O3HajSgWaie/kme1bcdXQnVsMXn4A5m9YOaxWnEZ8z9LCrnJ8BGnpTgFJUqSC4mv0Z/0NBcwTmeGCoEc9VYoA==}
 
-  '@dashkite/belmont@0.3.30':
-    resolution: {integrity: sha512-pR6QLSm5ezYxaLB3N3kAKD3FZ9tY3YKkoxhz+pZrtK3tEY3E8HlBoGafpIuI6yKaEkT/7SY/TvV26JSVMa/HYQ==}
+  '@dashkite/belmont@0.3.31':
+    resolution: {integrity: sha512-Nk2lQzecsIAhkPJXTRCI7U4k7Xx8A53tPwf22Q6andW/VpJk1GmVYN6VmQ6G0DmZvS5IYYe6WmljLHJij2qsMw==}
 
   '@dashkite/diff@0.7.0':
     resolution: {integrity: sha512-isZSJuAS9X9dl5HGUnwRB6jpN+3J0K5kjI1YE2sk7PfhpKl4MnRYqbpU8ytlEHjML2TfLgCoyBuIlGEnz10UAg==}
@@ -1173,8 +1173,8 @@ packages:
   '@dashkite/joy@0.12.40':
     resolution: {integrity: sha512-osq/1Lms2GpR04w7p4moF4dwXNYrrBihppQjDejn4+YN+Ak8sceWbuBo3nfpDS/szJ14/4aG7pkf2d2UwOXd+w==}
 
-  '@dashkite/joy@0.12.43':
-    resolution: {integrity: sha512-GHEKO9OCf8Ofoj/y9Fk6/n3MUmnTrJWoZzbN/fw5dI8tpK9flpOWicrFUYBSSKEcNQdyoZDNp+TZNQv6IrNbQw==}
+  '@dashkite/joy@0.12.44':
+    resolution: {integrity: sha512-uBY7ge53uj7GCxOh7z2U4D75+9AP6+LQjmB/tOdF+lNTTxaKQN+HKQIJKvw8stV8YMIQgv5zYTMWJeD+vhzbgA==}
 
   '@dashkite/joy@0.3.16':
     resolution: {integrity: sha512-dsU0us4j1Pb+zceoBvLbnZ2PbmULkJUtM2vtWLxKmoc1DE4w9SVTiPTe6JWvF0A0vk90ldv+Lc9qEA5x3O+DtQ==}
@@ -6111,7 +6111,7 @@ snapshots:
 
   '@dashkite/base64@1.0.1': {}
 
-  '@dashkite/belmont@0.3.30':
+  '@dashkite/belmont@0.3.31':
     dependencies:
       '@dashkite/generic': 0.5.0
       '@dashkite/joy': 0.12.40
@@ -6299,7 +6299,7 @@ snapshots:
     dependencies:
       '@dashkite/drn': 0.12.33
       '@dashkite/drn-loader': 0.11.29
-      '@dashkite/joy': 0.12.43
+      '@dashkite/joy': 0.12.44
       '@dashkite/masonry-hooks': 0.12.28
       '@dashkite/zephyr': 0.9.0
       js-yaml: 4.1.1
@@ -6455,7 +6455,7 @@ snapshots:
 
   '@dashkite/halstead@0.3.31':
     dependencies:
-      '@dashkite/belmont': 0.3.30
+      '@dashkite/belmont': 0.3.31
       '@dashkite/generic': 0.5.0
       '@dashkite/helium': 0.8.0
       '@dashkite/joy': 0.12.40
@@ -6470,7 +6470,7 @@ snapshots:
 
   '@dashkite/joy@0.12.40': {}
 
-  '@dashkite/joy@0.12.43': {}
+  '@dashkite/joy@0.12.44': {}
 
   '@dashkite/joy@0.3.16': {}
 
@@ -6494,7 +6494,7 @@ snapshots:
 
   '@dashkite/lakeshore@0.0.2':
     dependencies:
-      '@dashkite/belmont': 0.3.30
+      '@dashkite/belmont': 0.3.31
       '@dashkite/generic': 0.9.19
       '@dashkite/joy': 0.12.40
       '@dashkite/storage': 0.9.11
@@ -6513,7 +6513,7 @@ snapshots:
 
   '@dashkite/masonry-hooks@0.12.28':
     dependencies:
-      '@dashkite/joy': 0.12.43
+      '@dashkite/joy': 0.12.44
       '@dashkite/masonry': 0.21.0
     transitivePeerDependencies:
       - supports-color
@@ -6664,12 +6664,12 @@ snapshots:
   '@dashkite/river@0.0.10':
     dependencies:
       '@dashkite/generic': 0.9.32
-      '@dashkite/joy': 0.12.43
+      '@dashkite/joy': 0.12.44
 
   '@dashkite/river@0.0.11':
     dependencies:
       '@dashkite/generic': 0.9.32
-      '@dashkite/joy': 0.12.43
+      '@dashkite/joy': 0.12.44
 
   '@dashkite/scan@0.2.0':
     dependencies:
