@@ -84,7 +84,7 @@
     "@dashkite/genie-sky": "0.6.42",
     "@dashkite/genie-watch": "0.5.0",
     "@dashkite/genie-yaml": "0.11.13",
-    "@dashkite/halstead": "link:../halstead"
+    "@dashkite/halstead": "^0.3.29"
   },
   "dependencies": {
     "@dashkite/addison": "link:../addison",
@@ -92,7 +92,7 @@
     "@dashkite/joy": "0.12.40",
     "@dashkite/lakeshore": "link:../lakeshore",
     "@dashkite/reactive": "^0.7.35",
-    "@dashkite/river": "link:../river",
+    "@dashkite/river": "^0.0.10",
     "@dashkite/storage": "0.9.11",
     "js-yaml": "4.1.1",
     "marked": "17.0.6"

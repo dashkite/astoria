@@ -24,8 +24,8 @@ importers:
         specifier: ^0.7.35
         version: 0.7.35
       '@dashkite/river':
-        specifier: link:../river
-        version: link:../river
+        specifier: ^0.0.10
+        version: 0.0.10
       '@dashkite/storage':
         specifier: 0.9.11
         version: 0.9.11
@@ -73,8 +73,8 @@ importers:
         specifier: 0.11.13
         version: 0.11.13
       '@dashkite/halstead':
-        specifier: link:../halstead
-        version: link:../halstead
+        specifier: ^0.3.29
+        version: 0.3.29
 
 packages:
 
@@ -1158,6 +1158,12 @@ packages:
   '@dashkite/graphene-core@0.4.0':
     resolution: {integrity: sha512-Alne6iaaHel08pj4JlqRQjFDbzUwulAO4cjPjNePwfnLsRZ19lT5/OUTDHiq1D8WsX3M9Fh/Hh6EXjmCGvz7iQ==}
 
+  '@dashkite/halstead@0.3.29':
+    resolution: {integrity: sha512-ZzBFVodgGe+4JIj9NX+URtY3V6wL96wpraYqaN4iyk5uB1LJC5Chdo9knNwuFKHFxgasi2Ea4s5N1voKsDzVTg==}
+
+  '@dashkite/helium@0.8.0':
+    resolution: {integrity: sha512-f9FmNpG8eIS8Mj6jYJ93aOrBUW1yCxcaSA3tKOpkVOTwoeMRE6S/jHCxsojQ1SB1oQqzFp4hk7mVL1nSbGpgjA==}
+
   '@dashkite/joy@0.12.40':
     resolution: {integrity: sha512-osq/1Lms2GpR04w7p4moF4dwXNYrrBihppQjDejn4+YN+Ak8sceWbuBo3nfpDS/szJ14/4aG7pkf2d2UwOXd+w==}
 
@@ -1239,6 +1245,9 @@ packages:
   '@dashkite/messages@0.9.12':
     resolution: {integrity: sha512-sThSZdzlgkCv3b03feBnzj4v65e9hlnFN7obBNrJyfWrJeNjz88FxrCX0dzr0PDhHjNOaAVBFLpLyOJUmf/K0g==}
 
+  '@dashkite/observable@0.6.0':
+    resolution: {integrity: sha512-ZMQXvlvegr2XkpeD/pqv0tYzoIjgZq2vkSgmBkDq5BW49HdDqgXBzQ2omTq+wOOhtOyhdBJUOU7h5EdUjEI/AA==}
+
   '@dashkite/parse@0.4.3':
     resolution: {integrity: sha512-bE0kBjaGYjUnCzWJelQnx8vsfJ9YP07aRTVFZoY7TZWvMmnihoCSugL4IVWAOA2O0EAZXjT8FcjA4bNJ/BQwwg==}
 
@@ -1260,6 +1269,9 @@ packages:
   '@dashkite/reload@0.10.24':
     resolution: {integrity: sha512-ArFTSBTqNE+PVB6SNnxZEiS8JdsYTk8N6y0m1mkM8tjrRwX85quIsGZgl4VIRRV+r0t09TERDpE8IB4j6f/nIA==}
 
+  '@dashkite/river@0.0.10':
+    resolution: {integrity: sha512-1BVbgBwuix8bD2R2lbQ+UiCqwf0gVHs8Jq5US+wDa92NdozJB5HmjfmctfDP3skUfuR0p26yggUXpCL8L0PFag==}
+
   '@dashkite/scan@0.2.0':
     resolution: {integrity: sha512-Ihzyw90G+RAB7ietzrEZHDivqwsr4HdCm9LSUGKLFERN26RNvXmLp8CEE1OCkucH6ipfmDSF/ga8OVxxp0gGAw==}
 
@@ -1280,6 +1292,9 @@ packages:
 
   '@dashkite/sky-local-storage@0.8.0':
     resolution: {integrity: sha512-ECEomLb3/hkICATZWI5et6WQZTJQRAt7aW0LHkwUXg5mReUEN23xsRy41QSXis6b0UzvvPYR9LfwldmPIkqqdA==}
+
+  '@dashkite/storage@0.5.0':
+    resolution: {integrity: sha512-8wK0GhL3+6He9TT/0zVbx0d0TF1GLOQZCFPxIMSI4/riBWmrPo0nJ2VX4KiBZQsYA/+hpVIP1WCO2PHjoMaXDw==}
 
   '@dashkite/storage@0.9.11':
     resolution: {integrity: sha512-1XOcDlGSLhPPImrzcCBqu1SEU4XBVzUTNg38rkswUeEPayVJwzHPrMwyr0oIa7CRzmFtNbVBcfQS1w+7WglFeg==}
@@ -6410,6 +6425,21 @@ snapshots:
       js-yaml: 4.2.0
       panda-confidential: 3.1.2
 
+  '@dashkite/halstead@0.3.29':
+    dependencies:
+      '@dashkite/belmont': 0.3.29
+      '@dashkite/generic': 0.5.0
+      '@dashkite/helium': 0.8.0
+      '@dashkite/joy': 0.12.40
+      '@dashkite/observable': 0.6.0
+      '@dashkite/reactive': 0.7.33
+      '@dashkite/storage': 0.5.0
+
+  '@dashkite/helium@0.8.0':
+    dependencies:
+      '@dashkite/joy': 0.3.16
+      '@dashkite/katana': 0.4.8
+
   '@dashkite/joy@0.12.40': {}
 
   '@dashkite/joy@0.12.42': {}
@@ -6553,6 +6583,10 @@ snapshots:
       '@dashkite/generic': 0.5.0
       '@dashkite/joy': 0.7.0
 
+  '@dashkite/observable@0.6.0':
+    dependencies:
+      '@dashkite/joy': 0.3.16
+
   '@dashkite/parse@0.4.3':
     dependencies:
       '@dashkite/joy': 0.3.16
@@ -6586,6 +6620,11 @@ snapshots:
       '@dashkite/parse': 0.7.0
 
   '@dashkite/reload@0.10.24': {}
+
+  '@dashkite/river@0.0.10':
+    dependencies:
+      '@dashkite/generic': 0.9.32
+      '@dashkite/joy': 0.12.42
 
   '@dashkite/scan@0.2.0':
     dependencies:
@@ -6621,6 +6660,8 @@ snapshots:
   '@dashkite/sky-local-storage@0.8.0':
     dependencies:
       '@dashkite/zephyr': 0.3.0
+
+  '@dashkite/storage@0.5.0': {}
 
   '@dashkite/storage@0.9.11': {}
 
