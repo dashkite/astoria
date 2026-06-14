@@ -21,8 +21,8 @@ importers:
         specifier: link:../lakeshore
         version: link:../lakeshore
       '@dashkite/reactive':
-        specifier: link:../reactive
-        version: link:../reactive
+        specifier: ^0.7.34
+        version: 0.7.34
       '@dashkite/river':
         specifier: link:../river
         version: link:../river
@@ -37,8 +37,8 @@ importers:
         version: 17.0.6
     devDependencies:
       '@dashkite/amen':
-        specifier: link:../amen
-        version: link:../amen
+        specifier: ^0.9.31
+        version: 0.9.31
       '@dashkite/amen-console':
         specifier: 0.4.0
         version: 0.4.0
@@ -46,8 +46,8 @@ importers:
         specifier: 0.3.0
         version: 0.3.0
       '@dashkite/belmont':
-        specifier: link:../belmont
-        version: link:../belmont
+        specifier: ^0.3.28
+        version: 0.3.28
       '@dashkite/genie':
         specifier: 0.20.14
         version: 0.20.14
@@ -1072,6 +1072,9 @@ packages:
   '@dashkite/amen-console@0.4.0':
     resolution: {integrity: sha512-FNKGe1fvWV25BQhQ/WvtK6BXLI41ANbXhpy7Ednlwe2EaUm1Enqe1EGtFTueuAdVhGmdv4Im6NGuqv09IIGUrA==}
 
+  '@dashkite/amen@0.9.31':
+    resolution: {integrity: sha512-fpqirUA4Ix9D4frkZAVHZnt2UOqT64oR9SN+DRR8KfEFMBGq8SIwdiVOdeVW1JEDAXnYhnhIO7IyuyeQjOo0Qg==}
+
   '@dashkite/assert@0.3.0':
     resolution: {integrity: sha512-x0lHMF8k2CkFrx7gmtT8qoZ3GPk+RPPLRG5RcKMheqS7zDPEDPZ7IkHzXt2kq7LyvTMZZ+TI3suW44+Ms6Mqbg==}
 
@@ -1080,6 +1083,9 @@ packages:
 
   '@dashkite/base64@1.0.1':
     resolution: {integrity: sha512-7O3HajSgWaie/kme1bcdXQnVsMXn4A5m9YOaxWnEZ8z9LCrnJ8BGnpTgFJUqSC4mv0Z/0NBcwTmeGCoEc9VYoA==}
+
+  '@dashkite/belmont@0.3.28':
+    resolution: {integrity: sha512-ew2jsy/lgt+dfY7o+jWBZpXfNgSWmydmd1N/Ijaw624E8r/UfIoN7wMGqbONqy8Kcpsow+GXGWieGerzTPobfA==}
 
   '@dashkite/diff@0.7.0':
     resolution: {integrity: sha512-isZSJuAS9X9dl5HGUnwRB6jpN+3J0K5kjI1YE2sk7PfhpKl4MnRYqbpU8ytlEHjML2TfLgCoyBuIlGEnz10UAg==}
@@ -1233,11 +1239,20 @@ packages:
   '@dashkite/parse@0.4.3':
     resolution: {integrity: sha512-bE0kBjaGYjUnCzWJelQnx8vsfJ9YP07aRTVFZoY7TZWvMmnihoCSugL4IVWAOA2O0EAZXjT8FcjA4bNJ/BQwwg==}
 
+  '@dashkite/parse@0.7.0':
+    resolution: {integrity: sha512-lhU3LuRKCUVOgswBHjTvLnGIzhOk+QIxUQVSRNv+U1iPSzjpypFd/EBL5UQQ4qqU2w9u8M63FIBFHcxRiB/oDw==}
+
   '@dashkite/polaris@0.10.12':
     resolution: {integrity: sha512-jGYRi2Zeg7URNuKiGpO4cKzv/RPwRfVhdTYsUfxJ3TYZQKpRv1hBKDu4Z8Qe9tc4MRSmbDc/gcFJ0i7qVPvoEA==}
 
   '@dashkite/polaris@0.3.0':
     resolution: {integrity: sha512-DnUVo1tlTSTFGz7y0TadJJvY8Ly4HoNeD4+ZVDKWWLLbBLi48le2KyuURZ53KKViom1IuWEFWUl5gNtcZ/2Duw==}
+
+  '@dashkite/reactive@0.7.33':
+    resolution: {integrity: sha512-XDW952KBiu/4nHwr2b4K8VwOc3SLIm2bjLXtARzj09r9CBe3h7trfuDjb2Wfg7rZD9NpcMSksFHm0GJRiR8B4w==}
+
+  '@dashkite/reactive@0.7.34':
+    resolution: {integrity: sha512-GJxPOhjmo7IPanBXgNAvWt188azc3jFAiemqQbDU0doSZ3I2T7qiB0duQ6t3jOt+39j1kWgwvhiSYE/eGNw/Ig==}
 
   '@dashkite/reload@0.10.24':
     resolution: {integrity: sha512-ArFTSBTqNE+PVB6SNnxZEiS8JdsYTk8N6y0m1mkM8tjrRwX85quIsGZgl4VIRRV+r0t09TERDpE8IB4j6f/nIA==}
@@ -1250,6 +1265,9 @@ packages:
 
   '@dashkite/scout@0.2.0':
     resolution: {integrity: sha512-7L1YLjr/alcq1lvPTll+7Sc0Ek4H5gBIyUWpuGuIWqRDvHECgBrOhUDfFizjIFRAGFRVItdlpLHz6BOFKGC0KQ==}
+
+  '@dashkite/scout@0.8.32':
+    resolution: {integrity: sha512-0D+cnW6NlAS3MdNtuUP9kbnfw+vrwxch15zM3OYG6Au5zPdPrUphgD0Xc0lqenCchU4rephIhRBkdxG8AAgYDA==}
 
   '@dashkite/sky-alb@0.0.4':
     resolution: {integrity: sha512-yrYgDGkNGK0e87XNBlAam8JcDRNS+xzM0EKeDzTvb5o8om/pQ2rUxYkC+DuraXhkofatjClLEE1Ep/KQRh4uVQ==}
@@ -6037,6 +6055,8 @@ snapshots:
 
   '@dashkite/amen-console@0.4.0': {}
 
+  '@dashkite/amen@0.9.31': {}
+
   '@dashkite/assert@0.3.0':
     dependencies:
       '@dashkite/joy': 0.6.0
@@ -6048,6 +6068,14 @@ snapshots:
       '@dashkite/utf8': 1.0.1
 
   '@dashkite/base64@1.0.1': {}
+
+  '@dashkite/belmont@0.3.28':
+    dependencies:
+      '@dashkite/generic': 0.5.0
+      '@dashkite/joy': 0.12.40
+      '@dashkite/reactive': 0.7.33
+      '@dashkite/scout': 0.8.32
+      '@dashkite/url-codex': 0.5.0
 
   '@dashkite/diff@0.7.0(@aws-sdk/credential-provider-node@3.529.0)(encoding@0.1.13)':
     dependencies:
@@ -6524,6 +6552,10 @@ snapshots:
     dependencies:
       '@dashkite/joy': 0.3.16
 
+  '@dashkite/parse@0.7.0':
+    dependencies:
+      '@dashkite/joy': 0.3.16
+
   '@dashkite/polaris@0.10.12':
     dependencies:
       '@dashkite/joy': 0.7.0
@@ -6535,6 +6567,18 @@ snapshots:
       '@dashkite/joy': 0.3.16
       '@dashkite/scan': 0.2.0
       jsonpath-plus: 7.2.0
+
+  '@dashkite/reactive@0.7.33':
+    dependencies:
+      '@dashkite/generic': 0.9.32
+      '@dashkite/joy': 0.7.0
+      '@dashkite/parse': 0.7.0
+
+  '@dashkite/reactive@0.7.34':
+    dependencies:
+      '@dashkite/generic': 0.9.32
+      '@dashkite/joy': 0.12.40
+      '@dashkite/parse': 0.7.0
 
   '@dashkite/reload@0.10.24': {}
 
@@ -6550,6 +6594,11 @@ snapshots:
     dependencies:
       '@dashkite/joy': 0.3.16
       '@dashkite/url-codex': 0.2.0
+
+  '@dashkite/scout@0.8.32':
+    dependencies:
+      '@dashkite/joy': 0.12.40
+      '@dashkite/url-codex': 0.5.0
 
   '@dashkite/sky-alb@0.0.4':
     dependencies:

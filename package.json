@@ -72,10 +72,10 @@
     "release": "genie release"
   },
   "devDependencies": {
-    "@dashkite/amen": "link:../amen",
+    "@dashkite/amen": "^0.9.31",
     "@dashkite/amen-console": "0.4.0",
     "@dashkite/assert": "0.3.0",
-    "@dashkite/belmont": "link:../belmont",
+    "@dashkite/belmont": "^0.3.28",
     "@dashkite/genie": "0.20.14",
     "@dashkite/genie-clean": "0.9.0",
     "@dashkite/genie-coffee": "0.9.0",
@@ -91,7 +91,7 @@
     "@dashkite/domo": "^0.2.35",
     "@dashkite/joy": "0.12.40",
     "@dashkite/lakeshore": "link:../lakeshore",
-    "@dashkite/reactive": "link:../reactive",
+    "@dashkite/reactive": "^0.7.34",
     "@dashkite/river": "link:../river",
     "@dashkite/storage": "0.9.11",
     "js-yaml": "4.1.1",
