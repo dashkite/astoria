@@ -1043,8 +1043,8 @@ packages:
   '@dashkite/drn-sky@0.8.33':
     resolution: {integrity: sha512-+5m3io7EUT1DvF0BSo/SBLzR35nzCPoMYXKUKpaGXNhizv2IfFgy2eM/cVErU76CnA3RFDXFchHdXRuZgNNwFg==}
 
-  '@dashkite/drn@0.12.32':
-    resolution: {integrity: sha512-kQ0Ne+/mtfZ/M2J1oPlwa9a1+xOHuiJ01adHHRwvvmFWiz+RgQhByFejC61qsY3fHB2sPkR1CFNTPEQwtPNt/Q==}
+  '@dashkite/drn@0.12.33':
+    resolution: {integrity: sha512-8Ax//CbLtKUV0caS5RyzOJ40xD4W4qFDghlDzqraqNGKctgNo3hvOvwPx9krJAUZ4p1OYJWWC9RBQZiQP4yHgw==}
 
   '@dashkite/format-text@0.5.0':
     resolution: {integrity: sha512-v2Ri1PmnsXeAamAp2k8EMtYkweyKigIqLWYdmWu9wtpsGLhavQcxQ1BCHkUQrFjLDFq8QcHKRBWS3E449SW/Lw==}
@@ -2569,6 +2569,10 @@ packages:
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
 
+  js-yaml@4.1.0:
+    resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
+    hasBin: true
+
   js-yaml@4.1.1:
     resolution: {integrity: sha512-qQKT4zQxXl8lLwBtHMWwaTcGfFOZviOJet3Oy/xmGk2gZH677CJM9EvtfdSkgWcATZhj/55JZ0rmy3myCT5lsA==}
     hasBin: true
@@ -3060,8 +3064,8 @@ packages:
   regjsgen@0.8.0:
     resolution: {integrity: sha512-RvwtGe3d7LvWiDQXeQw8p5asZUmfU1G/l6WbUXeHta7Y2PEIvBTwH6E2EfmYUK8pxcxEdEmaomqyp0vZZ7C+3Q==}
 
-  regjsparser@0.13.1:
-    resolution: {integrity: sha512-dLsljMd9sqwRkby8zhO1gSg3PnJIBFid8f4CQj/sXx+7cKx+E7u0PKhZ+U4wmhx7EfmtvnA318oVaIkAB1lRJw==}
+  regjsparser@0.13.2:
+    resolution: {integrity: sha512-NgRBy2Nx/bE+9F27nVHnqcN5HjyLmecqsqx2PJHu3/IEtADD4WuxuXIVExD5PoSDFVrl78dOonfcOe5O+5nbzQ==}
     hasBin: true
 
   repeat-string@1.6.1:
@@ -5906,7 +5910,7 @@ snapshots:
     dependencies:
       '@dashkite/bake': 0.0.6
       '@dashkite/dolores': 0.8.0(@aws-sdk/credential-provider-node@3.529.0)(encoding@0.1.13)
-      '@dashkite/drn': 0.12.32
+      '@dashkite/drn': 0.12.33
       '@dashkite/joy': 0.12.40
       '@dashkite/sky-local-storage': 0.8.0
       '@dashkite/xrl': 0.4.0
@@ -5918,7 +5922,7 @@ snapshots:
       - aws-crt
       - encoding
 
-  '@dashkite/drn@0.12.32':
+  '@dashkite/drn@0.12.33':
     dependencies:
       '@dashkite/bake': 0.0.6
       '@dashkite/joy': 0.12.40
@@ -5927,7 +5931,7 @@ snapshots:
       '@dashkite/url-router': 0.5.0
       '@dashkite/zephyr': 0.9.0
       execa: 5.1.1
-      js-yaml: 4.2.0
+      js-yaml: 4.1.0
 
   '@dashkite/format-text@0.5.0':
     dependencies:
@@ -7786,6 +7790,10 @@ snapshots:
 
   js-tokens@4.0.0: {}
 
+  js-yaml@4.1.0:
+    dependencies:
+      argparse: 2.0.1
+
   js-yaml@4.1.1:
     dependencies:
       argparse: 2.0.1
@@ -8268,13 +8276,13 @@ snapshots:
       regenerate: 1.4.2
       regenerate-unicode-properties: 10.2.2
       regjsgen: 0.8.0
-      regjsparser: 0.13.1
+      regjsparser: 0.13.2
       unicode-match-property-ecmascript: 2.0.0
       unicode-match-property-value-ecmascript: 2.2.1
 
   regjsgen@0.8.0: {}
 
-  regjsparser@0.13.1:
+  regjsparser@0.13.2:
     dependencies:
       jsesc: 3.1.0
 
