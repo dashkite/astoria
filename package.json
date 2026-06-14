@@ -87,10 +87,10 @@
     "@dashkite/halstead": "^0.3.30"
   },
   "dependencies": {
-    "@dashkite/addison": "link:../addison",
+    "@dashkite/addison": "^0.2.28",
     "@dashkite/domo": "^0.2.35",
     "@dashkite/joy": "0.12.40",
-    "@dashkite/lakeshore": "link:../lakeshore",
+    "@dashkite/lakeshore": "^0.0.2",
     "@dashkite/reactive": "^0.7.36",
     "@dashkite/river": "^0.0.10",
     "@dashkite/storage": "0.9.11",
